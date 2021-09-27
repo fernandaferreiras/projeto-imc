@@ -3,9 +3,13 @@
         xmlns:android="http://schemas.android.com/apk/res/android">
 
         <!--    <solid android:color="#9999FF"/>-->
-        <gradient android:startColor="#9999FF"
-            android:endColor="#666BCB"
-            android:angle="360"/>
+<!--        &lt;!&ndash;<gradient android:startColor="#9999FF"-->
+<!--            android:endColor="#666BCB"-->
+<!--            android:angle="360"/>&ndash;&gt;-->
+
+    <gradient android:startColor="#FF87A0"
+        android:endColor="#E30613"
+        android:angle="360"/>
 
 
 </shape>

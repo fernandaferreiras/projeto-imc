@@ -42,7 +42,6 @@
         android:background="@drawable/ic_wave_top"
         android:layout_below="@id/linear_top"/>
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -157,7 +156,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="75dp"
         android:background="@drawable/ic_wave_botton"
         android:layout_alignParentBottom="true"/>
 

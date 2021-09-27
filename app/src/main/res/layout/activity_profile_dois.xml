@@ -187,9 +187,11 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp">
+            android:layout_height="350dp"
+            android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 app:cardCornerRadius="10dp"
@@ -211,19 +213,73 @@
                         android:layout_toRightOf="@id/iv__balanca"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="dsads"/>
+                            android:text="Pesar agora"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aconpanhe o seu peso"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
                 </RelativeLayout>
 
+            </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="25dp">
 
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv__historico"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/historico"
+                        android:scaleType="centerCrop"
+                        android:padding="10dp"/>
+
+                    <LinearLayout
+                        android:layout_toRightOf="@id/iv__historico"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ver histórico"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reveja suas conquistas"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 

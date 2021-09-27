@@ -7,8 +7,8 @@
 
 <!--    <solid android:color="#e30613"/>-->
 
-    <gradient android:startColor="#9999FF"
-        android:endColor="#666BCB"
+    <gradient android:startColor="#FF87A0"
+        android:endColor="#E30613"
         android:angle="360"/>
 
     <stroke
