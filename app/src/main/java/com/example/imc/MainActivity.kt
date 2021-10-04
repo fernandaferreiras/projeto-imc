@@ -26,14 +26,6 @@ class MainActivity : AppCompatActivity() {
 
             // textResultado.text = String().format("%.2f", imc)
                     // para formatar a casa decimal deve-se colocar o "f"
-
-
-
-
         }
-
-
-
-
     }
 }

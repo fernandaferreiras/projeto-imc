@@ -3,9 +3,9 @@ package com.example.imc
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class ProfileActivity : AppCompatActivity() {
+class ActivityLogIn : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
+        setContentView(R.layout.activity_log_in)
     }
 }
