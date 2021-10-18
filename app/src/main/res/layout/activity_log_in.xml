@@ -71,29 +71,31 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/activity_retangulo_login"
                 android:drawableStart="@drawable/ic_baseline_email_24"
                 android:drawablePadding="15dp"
                 android:maxLines="1"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:hint="Digite seu e-mail"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/activity_retangulo_login"
                 android:drawableStart="@drawable/ic_baseline_lock_24"
                 android:drawablePadding="15dp"
                 android:maxLines="1"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:hint="Digite uma senha"/>
 
             <Button
                 android:id="@+id/button_entrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/input_layout_senha"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/activity_entrar"
                 android:padding="15dp"
                 android:text="ENTRAR"
@@ -135,6 +137,7 @@
                     android:text="Não tem uma conta?" />
 
                 <TextView
+                    android:id="@+id/text_view_criar_conta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/text_view_esqueci"
