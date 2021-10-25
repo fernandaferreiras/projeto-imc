@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NovoUsuarioActivity">
+    tools:context=".ui.NovoUsuarioActivity">
 
     <LinearLayout
         android:id="@+id/linear__top"
@@ -151,12 +151,14 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Feminino" />
 
                 <RadioButton
+                    android:id="@+id/radioM"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

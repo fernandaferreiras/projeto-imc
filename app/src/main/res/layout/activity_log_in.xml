@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityLogIn">
+    tools:context=".ui.ActivityLogIn">
 
         <LinearLayout
             android:id="@+id/linear_top"
@@ -37,7 +37,7 @@
         <ImageView
             android:id="@+id/iv__wave__top"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="50dp"
             android:layout_below="@id/linear_top"
             android:background="@drawable/ic_wave_top" />
 
@@ -48,21 +48,21 @@
             android:layout_below="@id/iv__wave__top"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="15dp">
+            android:padding="17.5dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:text="Login"
-                android:textColor="@color/black"
+                android:textColor="@color/main_black"
                 android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/text_view_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12.5dp"
                 android:fontFamily="sans-serif"
                 android:text="Faça login para continuar"
                 android:textColor="@color/black"
@@ -71,7 +71,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/activity_retangulo_login"
                 android:drawableStart="@drawable/ic_baseline_email_24"
                 android:drawablePadding="15dp"
@@ -82,7 +82,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/activity_retangulo_login"
                 android:drawableStart="@drawable/ic_baseline_lock_24"
                 android:drawablePadding="15dp"
@@ -95,7 +95,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/input_layout_senha"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/activity_entrar"
                 android:padding="15dp"
                 android:text="ENTRAR"
@@ -105,10 +105,10 @@
                 android:id="@+id/checkbox_lembrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12.5dp"
                 android:layout_below="@+id/button_entrar"
                 android:layout_alignRight="@+id/button_entrar"
                 android:layout_gravity="right"
-                android:layout_marginTop="10dp"
                 android:text="Lembra-me" />
 
             <TextView
@@ -116,6 +116,7 @@
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
+                android:layout_marginTop="12.5dp"
                 android:gravity="right"
                 android:text="Esqueci a senha"
                 android:textColor="@color/blue" />
@@ -124,7 +125,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12.5dp"
                 android:gravity="right"
                 android:orientation="horizontal">
 

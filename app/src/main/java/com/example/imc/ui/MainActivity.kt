@@ -1,9 +1,11 @@
-package com.example.imc
+package com.example.imc.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.example.imc.R
+import com.example.imc.calcularImc
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

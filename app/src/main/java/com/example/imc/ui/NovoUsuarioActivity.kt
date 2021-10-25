@@ -1,13 +1,18 @@
-package com.example.imc
+package com.example.imc.ui
 
 import android.app.DatePickerDialog
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
-import android.widget.RadioGroup
+import android.widget.RadioButton
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.imc.R
+import com.example.imc.model.Usuario
+import com.example.imc.utils.convertStringToLocalDate
+import java.time.LocalDate
 import java.util.*
 
 class NovoUsuarioActivity : AppCompatActivity() {
@@ -18,6 +23,8 @@ class NovoUsuarioActivity : AppCompatActivity() {
     lateinit var editProfissao: EditText
     lateinit var editAltura: EditText
     lateinit var editDataNascimento: EditText
+    lateinit var radioF: RadioButton
+    lateinit var radioM: RadioButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +36,8 @@ class NovoUsuarioActivity : AppCompatActivity() {
         editProfissao = findViewById(R.id.edit_profissao)
         editAltura = findViewById(R.id.edit_altura)
         editDataNascimento = findViewById(R.id.edit_data_nascimento)
+        radioF = findViewById(R.id.radioF)
+        radioM = findViewById(R.id.radioM)
 
         supportActionBar!!.title = "Novo Usuario"
 
@@ -66,7 +75,52 @@ class NovoUsuarioActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if (validarCampos()) {
+
+            val nascimento = convertStringToLocalDate(editDataNascimento.text.toString())
+
+            // criando objeto usuario
+            val  usuario = Usuario(
+                1,
+                editNome.text.toString(),
+                editEmail.text.toString(),
+                editSenha.text.toString(),
+                0,
+                editAltura.text.toString().toDouble(),
+                LocalDate.of(
+                    nascimento.year,
+                    nascimento.monthValue,
+                    nascimento.dayOfMonth,
+                ),
+                editProfissao.toString(),
+                if (radioF.isChecked){
+                    'F'
+                } else {
+                    'M'
+                }
+
+            )
+
+            // salvar registro em um SharedPrefenrences
+
+            //criando um SharedPrefenrences se nao existir, se existir ele sera aberto para edicao
+            val dados = getSharedPreferences("usuario", Context.MODE_PRIVATE)
+
+            // criando um objeto que permitira a edicao dos dados do arquivo SharedPrefenrences
+
+            val editor = dados.edit()
+            editor.putInt("id", usuario.id)
+            editor.putString("nome", usuario.nome)
+            editor.putString("email", usuario.email)
+            editor.putString("senha", usuario.senha)
+            editor.putInt("peso", usuario.peso)
+            editor.putFloat("altura", usuario.altura.toFloat())
+            editor.putString("dataNascimento", usuario.dataNascimento.toString())
+            editor.putString("profissao", usuario.profissao)
+            editor.putString("sexo", usuario.sexo.toString())
+            editor.apply()
         }
+
+        Toast.makeText(this, "Usuario cadastrado", Toast.LENGTH_SHORT).show()
 
         return true
     }
