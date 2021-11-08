@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ProfileDoisActivity"
-    android:padding="10dp">
+    android:padding="10dp"
+    tools:context=".ui.ProfileDoisActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,169 +16,177 @@
             android:id="@+id/linear_top_parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
             android:background="@drawable/activity_background_profile"
+            android:gravity="center"
+            android:orientation="vertical"
 
             android:padding="10dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                app:cardBackgroundColor="@color/main_red"
+                app:cardBackgroundColor="@color/main_color"
                 app:cardCornerRadius="60dp">
 
                 <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/foto_perfil"
-                        android:scaleType="centerCrop"/>
+                    android:id="@+id/profile_foto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/foto_perfil" />
 
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:layout_marginTop="10dp"
+                android:id="@+id/profile_nome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Susanna Hoffs"
-                android:textSize="17.5sp"
                 android:textColor="@color/white"
-                android:textStyle="bold"/>
+                android:textSize="17.5sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_marginTop="10dp"
+                android:id="@+id/profile_profissao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Singer"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:layout_marginTop="10dp">
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_weight="1">
+                    android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/profile_imc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="25.7"
+                        android:textColor="@color/white"
                         android:textSize="17.5sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="IMC"
+                        android:textColor="@color/white"
                         android:textSize="12.5sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_weight="1">
+                    android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/profile_ncd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1980"
+                        android:textColor="@color/white"
                         android:textSize="17.5sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NCD"
+                        android:textColor="@color/white"
                         android:textSize="12.5sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_weight="1">
+                    android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/profile_idade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="49"
+                        android:textColor="@color/white"
                         android:textSize="17.5sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="IDADE"
+                        android:textColor="@color/white"
                         android:textSize="12.5sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_weight="1">
+                    android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/profile_peso"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="67"
+                        android:textColor="@color/white"
                         android:textSize="17.5sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="PESO"
+                        android:textColor="@color/white"
                         android:textSize="12.5sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_weight="1">
+                    android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/profile_altura"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1.57"
+                        android:textColor="@color/white"
                         android:textSize="17.5sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ALTURA"
+                        android:textColor="@color/white"
                         android:textSize="12.5sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -194,8 +201,8 @@
                 android:id="@+id/card_view"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                app:cardCornerRadius="10dp"
-                android:layout_marginTop="100dp">
+                android:layout_marginTop="100dp"
+                app:cardCornerRadius="10dp">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -205,31 +212,31 @@
                         android:id="@+id/iv__balanca"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/weight"
+                        android:padding="10dp"
                         android:scaleType="centerCrop"
-                        android:padding="10dp"/>
+                        android:src="@drawable/weight" />
 
                     <LinearLayout
-                        android:layout_toRightOf="@id/iv__balanca"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_centerVertical="true">
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/iv__balanca"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Pesar agora"
+                            android:textColor="@color/black"
                             android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Aconpanhe o seu peso"
-                            android:textSize="15sp"
-                            android:textColor="@color/black"/>
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
 
                     </LinearLayout>
 
@@ -240,8 +247,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                app:cardCornerRadius="10dp"
-                android:layout_marginTop="25dp">
+                android:layout_marginTop="25dp"
+                app:cardCornerRadius="10dp">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -251,31 +258,31 @@
                         android:id="@+id/iv__historico"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/historico"
+                        android:padding="10dp"
                         android:scaleType="centerCrop"
-                        android:padding="10dp"/>
+                        android:src="@drawable/historico" />
 
                     <LinearLayout
-                        android:layout_toRightOf="@id/iv__historico"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_centerVertical="true">
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/iv__historico"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Ver histórico"
+                            android:textColor="@color/black"
                             android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Reveja suas conquistas"
-                            android:textSize="15sp"
-                            android:textColor="@color/black"/>
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
 
                     </LinearLayout>
 
@@ -287,9 +294,7 @@
         </LinearLayout>
 
 
-
-
-        </LinearLayout>
-
-
     </LinearLayout>
+
+
+</LinearLayout>
