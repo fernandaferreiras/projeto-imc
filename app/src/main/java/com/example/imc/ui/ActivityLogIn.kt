@@ -35,7 +35,7 @@ class ActivityLogIn : AppCompatActivity() {
             
             if (autenticou) {
                 val intent = Intent (
-                    this, NovoUsuarioActivity::class.java)
+                    this, ProfileDoisActivity::class.java)
                 startActivity(intent)
             } else  {
                 Toast.makeText(this, "Usuario ou senha incorretos", Toast.LENGTH_SHORT).show()

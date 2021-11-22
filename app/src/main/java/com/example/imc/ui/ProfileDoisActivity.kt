@@ -2,8 +2,12 @@ package com.example.imc.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.imc.R
+import com.example.imc.utils.calcularIdade
+import com.example.imc.utils.convertBase64ToBitmap
+
 
 class ProfileDoisActivity : AppCompatActivity() {
 
@@ -14,11 +18,13 @@ class ProfileDoisActivity : AppCompatActivity() {
     lateinit var tvPeso: TextView
     lateinit var tvIdade: TextView
     lateinit var tvAltura: TextView
-//    lateinit var tvPerfil: TextView
+    lateinit var ivPerfil: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_dois)
+
+        supportActionBar!!.hide()
 
         tvNome = findViewById(R.id.profile_nome)
         tvProfissao = findViewById(R.id.profile_profissao)
@@ -27,6 +33,7 @@ class ProfileDoisActivity : AppCompatActivity() {
         tvPeso = findViewById(R.id.profile_peso)
         tvIdade = findViewById(R.id.profile_idade)
         tvAltura = findViewById(R.id. profile_altura)
+        ivPerfil = findViewById(R.id.profile_foto)
 
 
         carregarDashBoard()
@@ -39,6 +46,10 @@ class ProfileDoisActivity : AppCompatActivity() {
         tvNome.text = arquivo.getString("nome", "")
         tvProfissao.text = arquivo.getString("profissao", "")
         tvAltura.text = arquivo.getFloat("altura", 0.0f).toString()
+        tvIdade.text = calcularIdade(arquivo.getString("dataNascimento", "")!!).toString()
+        val bitmap = convertBase64ToBitmap(arquivo.getString("fotoPerfil", "")!!)
+        ivPerfil.setImageBitmap(bitmap)
+
 
     }
 

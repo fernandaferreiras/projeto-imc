@@ -54,9 +54,11 @@ class NovoUsuarioActivity : AppCompatActivity() {
 
         supportActionBar!!.title = "Novo Usuario"
 
+        imageBitmap = resources.getDrawable(R.drawable.ic_baseline_person_24).toBitmap()
+
 //        imageBitmap = BitmapFactory.decodeResource(resources, R.drawable.ic_baseline_person_24)
 
-        imageBitmap = resources.getDrawable(R.drawable.ic_baseline_person_24).toBitmap()
+//        imageBitmap = resources.getDrawable(R.drawable.ic_baseline_person_24).toBitmap()
 
         // Abrir a galeria de fotos para escolher uma foto para o perfil
         tvTrocarFoto.setOnClickListener {
