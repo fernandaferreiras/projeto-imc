@@ -15,7 +15,7 @@ fun convertStringToLocalDate(brazilDate: String) : LocalDate {
     return localDateFormat
 }
 
-fun calcularIdade(dataNascimento : String) : Int {
+fun calcularIdade(dataNascimento: String) : Int {
 
     // obter a data de hj
     val hoje = LocalDate.now()
@@ -24,9 +24,32 @@ fun calcularIdade(dataNascimento : String) : Int {
 
     val nascimentoArray = dataNascimento.split("-"). toTypedArray()
 
-    val nascimento = LocalDate.of(nascimentoArray[0].toInt(), nascimentoArray[1].toInt(), nascimentoArray[2].toInt())
+    val nascimento = LocalDate.of(
+        nascimentoArray[0].toInt(),
+        nascimentoArray[1].toInt(),
+        nascimentoArray[2].toInt()
+    )
 
     val idade = Period.between(nascimento, hoje).years
     return idade
+
+}
+
+fun getDataAtualBrasil(): String {
+
+    val hoje = LocalDate.now()
+
+    val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+
+    val dataBrasil = hoje.format(formatter)
+
+//    val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+//
+//    val dt1 = LocalDate.parse("15/03/1990", formatter)
+
+    return dataBrasil
+}
+
+fun converterLocalDateEmDataBrasil() {
 
 }

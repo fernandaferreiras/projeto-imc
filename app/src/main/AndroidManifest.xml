@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/kcal"
         android:supportsRtl="true"
         android:theme="@style/Theme.Imc">
-        <activity android:name=".PesarActivity"></activity>
+        <activity android:name=".ui.TesteActivity"></activity>
+        <activity android:name=".ui.PesarActivity" />
         <activity android:name=".ui.ActivityLogIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
