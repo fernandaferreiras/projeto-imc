@@ -3,10 +3,12 @@ package com.example.imc.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.example.imc.R
+import com.example.imc.repository.PesagemRepository
 import com.example.imc.utils.calcularIdade
 import com.example.imc.utils.convertBase64ToBitmap
 
@@ -22,6 +24,7 @@ class ProfileDoisActivity : AppCompatActivity() {
     lateinit var tvAltura: TextView
     lateinit var ivPerfil: ImageView
     lateinit var cardNovaPesagem: CardView
+    lateinit var cardHistorico: CardView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,10 +42,21 @@ class ProfileDoisActivity : AppCompatActivity() {
         tvAltura = findViewById(R.id. profile_altura)
         ivPerfil = findViewById(R.id.profile_foto)
         cardNovaPesagem = findViewById(R.id.card_view_pesar_agora)
+        cardHistorico = findViewById(R.id.card_historico)
 
         cardNovaPesagem.setOnClickListener {
             val intent = Intent(this, TesteActivity::class.java)
             startActivity(intent)
+        }
+
+        cardHistorico.setOnClickListener {
+            val pesagemRepository = PesagemRepository(this)
+            val listaPesagem = pesagemRepository.getListaPesagem()
+
+//            for (p in listaPesagem) {
+//                Log.i("xpto", "${p.dataPesagem} - ${p.peso}")
+//            }
+
         }
 
 
